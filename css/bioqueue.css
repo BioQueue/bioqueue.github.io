@@ -2,6 +2,16 @@ html, body
 {
 	height: 100%;
 }
+a {
+	text-decoration: none;
+}
+a:link {
+	text-decoration: none;
+}
+h3 {
+	margin: 0;
+	padding: 0;
+}
 #logo
 {
 	padding: 4em 0em;
@@ -54,7 +64,7 @@ html, body
 	border: 0px;
 	background-color: rgba(255,255,255,.2);
 }
-#menu a:hover
+#menu a:hover, .copyright a:hover, .page a:hover
 {
 	border-radius: 30px;
 	border: 0px;
@@ -62,6 +72,9 @@ html, body
 }
 .page {
 	padding: 6em 2em;
+}
+.feature {
+	padding: 5em 2em;
 }
 .title {
     padding: 1em 2em 2em 2em;
@@ -81,4 +94,38 @@ p {
 	text-align: center;
 	margin: auto;
 	width: 100%;
+}
+.even-page {
+	background-color: #99CC99;
+}
+.icon-span {
+	background-color: #99CC00;
+	color: #FFF;
+	position: relative;
+	display: block;
+	margin: 0px auto 20px auto;
+	line-height: 2.5em;
+	font-size: 4em;
+	text-align: center;
+}
+.feature-div{
+	text-align: center;
+}
+.byline{
+	display: block;
+	padding-top: 1em;
+}
+.copyright {
+	background-color: #009E2D;
+	padding: 5em 2em;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+}
+.copyright p {
+	text-align: center;
+    font-size: 1em;
+    color: #FFF;
+}
+.page a, .copyright a {
+	color: #FFF;
 }

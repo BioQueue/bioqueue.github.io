@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BioQueue</title>
+    <meta name="keywords" content="BioQueue, Snakemake, Ruffus, bioinformatics, auto, analysis, pipeline" />
+    <meta name="description" content="BioQueue is a free, lightweight and easy-to-use queue system to accelerate the proceeding of bioinformatic workflows. Based on machine learning methods, BioQueue can maximize the efficiency, and it also reduces the possibility of errors caused by unsupervised concurrency." />
+    <title>Homepage | BioQueue</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bioqueue.css" rel="stylesheet">
@@ -23,10 +25,10 @@
       <div id="menu" class="container">
         <ul>
           <li class="current_page_item"><a href="#" accesskey="1" title="">Homepage</a></li>
-          <li><a href="https://github.com/liyao001/BioQueue" accesskey="2" title="">Get started</a></li>
-          <li><a href="https://bioqueue.readthedocs.io/en/latest/" accesskey="3" title="">Documentation</a></li>
-          <li><a href="http://bioqueue.nefu.edu.cn" accesskey="4" title="">Open platform</a></li>
-          <li><a href="http://bioqueue.nefu.edu.cn" accesskey="5" title="">Publications</a></li>
+          <li><a href="https://github.com/liyao001/BioQueue" target="_blank" accesskey="2" title="">Get started</a></li>
+          <li><a href="https://bioqueue.readthedocs.io/en/latest/" target="_blank" accesskey="3" title="">Documentation</a></li>
+          <li><a href="http://bioqueue.nefu.edu.cn" target="_blank" accesskey="4" title="">Open platform</a></li>
+          <li><a href="publication.html" target="_blank" accesskey="5" title="">Publications</a></li>
         </ul>
       </div>
     </div>
@@ -36,13 +38,13 @@
           <div class="title">
             <h2>Accelerate bioinformatic analysis</h2>
           </div>
-          <p>BioQueue is a lightweight and easy-to-use queue system to accelerate the proceeding of bioinformatic workflows. Based on machine learning methods, BioQueue can maximize the efficiency, and at the same time, it also reduces the possibility of errors caused by unsupervised concurrency (like memory overflow). BioQueue can both run on POSIX compatible systems (Linux, Solaris, OS X, etc.) and Windows.</p>
+          <p>BioQueue is a free, lightweight and easy-to-use queue system to accelerate the proceeding of bioinformatic workflows. Based on machine learning methods, BioQueue can maximize the efficiency, and at the same time, it also reduces the possibility of errors caused by unsupervised concurrency (like memory overflow). BioQueue can both run on POSIX compatible systems (Linux, Solaris, OS X, etc.) and Windows.</p>
         </div>
         <div class="col-md-6 col-xs-12">
           <div id="sidebar" class="powerpoint" style="height: 300px;"></div>
         </div>
       </div>
-      <div id="why-row" class="row page" style="background: #B2D3EF;">
+      <div id="why-row" class="row page even-page">
         <div class="col-md-6 col-xs-12">
           <div id="sidebar-2" class="powerpoint" style="height: 150px;"></div>
           <hr>
@@ -50,11 +52,51 @@
         </div>
         <div class="col-md-6 col-xs-12">
           <div class="title">
-            <h2 style="color: #ccc;">Why BioQueue Can Accelerate?</h2>
+            <h2 style="color: white;">Why BioQueue Can Accelerate?</h2>
           </div>
-          <p style="color: #ccc;">Limited by the design of a software or the system resources, many currently available tools cannot fully use the system resources allotted to them or may not achieve an ideal efficiency or can even generate errors (such as memory overflow) when running multiple jobs simultaneously. BioQueue estimates the resources needed by each job and implements a greedy algorithm to dispatch them to make sure the maximized efficiency.</p>
+          <p style="color: white;">Limited by the design of a software or the system resources, many currently available tools cannot fully use the system resources allotted to them or may not achieve an ideal efficiency and can even generate errors (such as memory overflow) when running multiple jobs simultaneously.</p>
+          <p style="color: white;">BioQueue estimates the resources needed by each job and implements a greedy algorithm to dispatch them to make sure the maximized efficiency.</p>
+          <p  style="color: white;">*More detailed description can be found in our <a href="//doi.org/10.1093/bioinformatics/btx403" target="_blank">publication</a> about the benchmark result.</p>
         </div>
       </div>
+      <div id="features-row" class="feature">
+        <div class="title">
+          <h2>Important Features</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-xs-12">
+            <span class="icon-span glyphicon glyphicon-send"></span>
+            <div class="feature-div">
+              <h3>Transplantable Protocol</h3>
+              <span class="byline">Protocols in BioQueue can be exported as a plain text file, and users who are using different instances can import protocols created by others then process the same analysis.</span>
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12">
+            <span class="icon-span glyphicon glyphicon-search"></span>
+            <div class="feature-div">
+              <h3>Knowledge Base</h3>
+              <span class="byline">Users can share or search novel protocols from the knowledge base. The KB also allows users to search for the usages of bioinformatics software directly on BioQueue’s workbench.</span>
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12">
+            <span class="icon-span glyphicon glyphicon-inbox"></span>
+            <div class="feature-div">
+              <h3>Ref and Autocomplete</h3>
+              <span class="byline">In BioQueue, data which might be used in multiple protocols, like ref genomes, can be defined as references. When creating protocols/jobs, the AC widget can provide relative suggestions.</span>
+            </div>
+          </div>
+        </div>
+        <a class="btn btn-success btn-block" href="https://github.com/liyao001/BioQueue" target="_blank" role="button" style="font-size: 1.5em; margin-top: 2em;">Get Started Now!</a>
+      </div>
+    </div>
+    <div class="copyright">
+      <p><strong>Citation:</strong> Yao, L., Wang, H., Song, Y. &amp; Sui, G. <a href="//doi.org/10.1093/bioinformatics/btx403" target="_blank">BioQueue: a novel pipeline framework to accelerate bioinformatics analysis</a>. <i>Bioinformatics</i> <b>33</b>, 3286–3288 (2017)</p>
+      <ul class="list-inline">
+        <li><a href="https://github.com/liyao001/BioQueue">GitHub Repository</a></li>
+        <li><a href="https://bioqueue.readthedocs.io/en/latest/">Documentation</a></li>
+        <li><a href="https://github.com/liyao001/BioQueue/issues">Having Problems?</a></li>
+      </ul>
+      <p>BioQueue is licensed under the <a href="https://github.com/liyao001/BioQueue/blob/master/LICENSE">Apache License 2.0</a>. The documentation is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
