@@ -1,1 +1,188 @@
-Under Construction...
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BioQueue</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bioqueue.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="logo">
+      <h1><a href="#" class="icon icon-group"><span>BioQueue</span></a></h1>
+    </div>
+    <div id="header">
+      <div id="menu" class="container">
+        <ul>
+          <li class="current_page_item"><a href="#" accesskey="1" title="">Homepage</a></li>
+          <li><a href="https://github.com/liyao001/BioQueue" accesskey="2" title="">Get started</a></li>
+          <li><a href="https://bioqueue.readthedocs.io/en/latest/" accesskey="3" title="">Documentation</a></li>
+          <li><a href="http://bioqueue.nefu.edu.cn" accesskey="4" title="">Open platform</a></li>
+          <li><a href="http://bioqueue.nefu.edu.cn" accesskey="5" title="">Publications</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div id="benchmark-row" class="row page">
+        <div class="col-md-6 col-xs-12">
+          <div class="title">
+            <h2>Accelerate bioinformatic analysis</h2>
+          </div>
+          <p>BioQueue is a lightweight and easy-to-use queue system to accelerate the proceeding of bioinformatic workflows. Based on machine learning methods, BioQueue can maximize the efficiency, and at the same time, it also reduces the possibility of errors caused by unsupervised concurrency (like memory overflow). BioQueue can both run on POSIX compatible systems (Linux, Solaris, OS X, etc.) and Windows.</p>
+        </div>
+        <div class="col-md-6 col-xs-12">
+          <div id="sidebar" class="powerpoint" style="height: 300px;"></div>
+        </div>
+      </div>
+      <div id="why-row" class="row page" style="background: #B2D3EF;">
+        <div class="col-md-6 col-xs-12">
+          <div id="sidebar-2" class="powerpoint" style="height: 150px;"></div>
+          <hr>
+          <div id="sidebar-3" class="powerpoint" style="height: 150px;"></div>
+        </div>
+        <div class="col-md-6 col-xs-12">
+          <div class="title">
+            <h2 style="color: #ccc;">Why BioQueue Can Accelerate?</h2>
+          </div>
+          <p style="color: #ccc;">Limited by the design of a software or the system resources, many currently available tools cannot fully use the system resources allotted to them or may not achieve an ideal efficiency or can even generate errors (such as memory overflow) when running multiple jobs simultaneously. BioQueue estimates the resources needed by each job and implements a greedy algorithm to dispatch them to make sure the maximized efficiency.</p>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/echarts.js"></script>
+    <script src="js/wonderland.js"></script>
+    <script src="js/macarons.js"></script>
+<script type="text/javascript">
+var benchmark_chart = echarts.init(document.getElementById('sidebar'), 'wonderland');
+var option = {
+  title: {
+    text: 'Benchmark'
+  },
+  legend: {
+    data:['Elapsed Time (minutes)*']
+  },
+  xAxis: {
+    data: ["BioQueue","BigDataScript","Ruffus","Snakemake","Galaxy"]
+  },
+  yAxis: {},
+  series: [{
+    name: 'Elapsed Time (minutes)*',
+    type: 'bar',
+    data: [617, 852, 895, 930, 1147]
+  }]
+};
+benchmark_chart.setOption(option);
+var cpu_chart = echarts.init(document.getElementById('sidebar-2'), 'macarons');
+option_cpu = {
+    title: {
+        text: 'CPU Usage*'
+    },
+    tooltip : {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            label: {
+                backgroundColor: '#6a7985'
+            }
+        }
+    },
+    legend: {
+        data:['BioQueue','Snakemake']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: false
+    },
+    xAxis : [
+        {
+            type : 'category',
+            boundaryGap : false,
+            data : ['9', '19', '29', '39', '49', '59', '69', '79', '89', '99', '109', '119', '129', '139', '149', '159', '169', '179', '189', '199', '209', '219', '229', '239', '249', '259', '269', '279', '289', '299', '309', '319', '329', '339', '349', '359', '369', '379', '389', '399', '409', '419', '429', '439', '449', '459', '469', '479', '489', '499', '509', '519', '529', '539', '549', '559', '569', '579', '589', '599', '609', '619', '629', '639', '649', '659', '669', '679', '689', '699', '709', '719', '729', '739', '749', '759', '769', '779', '789', '799', '809', '819', '829', '839', '849', '859', '869', '879', '889', '899', '909', '919']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'BioQueue',
+            type:'line',
+            areaStyle: {normal: {}},
+            data:[96.95, 97.05, 97.29, 97.44, 97.71, 16.64, 97.33, 97.8, 98.07, 97.92, 98.27, 74.69, 96.98, 97.1, 77.41, 98.05, 98.59, 98.18, 98.16, 97.69, 97.69, 97.65, 98.04, 97.65, 97.51, 97.91, 98.08, 98.08, 98.19, 97.8, 27.28, 9.03, 16.12, 20.01, 48.16, 42.67, 44.06, 99.56, 99.07, 97.83, 98.3, 97.77, 97.93, 97.99, 97.94, 98.32, 98.35, 98.16, 97.85, 97.96, 97.36, 97.93, 97.78, 98.05, 98.08, 48.62, 7, 76.26, 43.73, 24.35, 20.77, 0]
+        },
+        {
+            name:'Snakemake',
+            type:'line',
+            areaStyle: {normal: {}},
+            data:[97.37, 97.15, 97.32, 97.4, 97.32, 97.27, 97.23, 97.44, 97.16, 57.1, 93.46, 97.48, 97.22, 97.65, 97.43, 97.44, 97.81, 97.74, 97.93, 97.41, 97.34, 96.86, 97.48, 97.28, 96.94, 97.16, 97.36, 96.52, 96.67, 97.22, 97.76, 97.62, 97.38, 97, 97.37, 96.87, 96.9, 3.96, 4.36, 3.98, 4.38, 19.09, 29.75, 4.29, 30.9, 41.43, 28.88, 4.26, 32.7, 4.24, 27.88, 34.19, 25.5, 38.38, 20.43, 4.51, 3.94, 12.24, 34.41, 31.83, 4.23, 29.53, 4.2, 28.81, 28.34, 4.53, 45.33, 9.36, 9.78, 9.25, 8.88, 8.19, 11.63, 9.25, 7.46, 6.29, 6.38, 8.18, 8.76, 7.5, 8.74, 8.87, 9.21, 8.83, 8.63, 6.08, 8.44, 7.85, 9.95, 7.7, 8.06, 8.15]
+        }
+    ]
+};
+cpu_chart.setOption(option_cpu);
+var mem_chart = echarts.init(document.getElementById('sidebar-3'), 'macarons');
+option_mem = {
+    title: {
+        text: 'Memory Usage*'
+    },
+    tooltip : {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            label: {
+                backgroundColor: '#6a7985'
+            }
+        }
+    },
+    legend: {
+        data:['BioQueue','Snakemake']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: false
+    },
+    xAxis : [
+        {
+            type : 'category',
+            boundaryGap : false,
+            data : ['9', '19', '29', '39', '49', '59', '69', '79', '89', '99', '109', '119', '129', '139', '149', '159', '169', '179', '189', '199', '209', '219', '229', '239', '249', '259', '269', '279', '289', '299', '309', '319', '329', '339', '349', '359', '369', '379', '389', '399', '409', '419', '429', '439', '449', '459', '469', '479', '489', '499', '509', '519', '529', '539', '549', '559', '569', '579', '589', '599', '609', '619', '629', '639', '649', '659', '669', '679', '689', '699', '709', '719', '729', '739', '749', '759', '769', '779', '789', '799', '809', '819', '829', '839', '849', '859', '869', '879', '889', '899', '909', '919']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'BioQueue',
+            type:'line',
+            areaStyle: {normal: {}},
+            data:[12.28, 12.90, 26.62, 34.16, 34.81, 33.26, 13.29, 13.73, 31.42, 34.98, 35.48, 31.43, 13.46, 13.98, 30.74, 35.39, 35.73, 35.92, 13.91, 14.36, 14.33, 35.08, 35.42, 35.58, 35.59, 14.19, 14.37, 35.84, 36.03, 36.12, 89.63, 88.80, 93.03, 93.09, 94.21, 49.56, 29.00, 13.45, 13.73, 14.24, 34.98, 35.53, 35.80, 35.01, 35.70, 36.35, 13.93, 14.22, 14.34, 34.91, 35.30, 35.78, 35.48, 14.20, 14.30, 68.09, 70.70, 70.67, 71.92, 6.90, 7.48, 0]
+        },
+        {
+            name:'Snakemake',
+            type:'line',
+            areaStyle: {normal: {}},
+            data:[9.09, 9.68, 9.44, 9.45, 9.45, 9.46, 9.52, 9.58, 9.65, 9.77, 10.01, 10.03, 10.04, 10.17, 8.99, 10.21, 10.14, 10.12, 10.07, 10.12, 10.09, 10.11, 10.21, 10.21, 10.03, 10.16, 8.63, 10.18, 10.08, 10.07, 10.09, 10.05, 10.12, 10.05, 10.09, 10.04, 10.13, 14.49, 24.51, 10.20, 23.78, 23.17, 24.26, 23.00, 24.38, 23.35, 24.31, 24.30, 24.66, 24.44, 24.82, 24.32, 24.75, 24.31, 24.72, 24.53, 24.83, 24.50, 25.02, 24.31, 24.59, 24.81, 19.50, 24.58, 10.47, 24.77, 22.65, 24.71, 3.14, 3.13, 3.11, 3.13, 3.09, 3.15, 3.31, 3.11, 3.19, 3.39, 3.10, 3.11, 3.09, 3.11, 3.11, 3.66, 3.09, 3.05, 3.14, 3.09, 3.10, 3.20, 3.07, 3.18]
+        }
+    ]
+};
+mem_chart.setOption(option_mem);
+</script>
+  </body>
+</html>

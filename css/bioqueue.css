@@ -1,0 +1,84 @@
+html, body
+{
+	height: 100%;
+}
+#logo
+{
+	padding: 4em 0em;
+	background: #FFF;
+}
+#logo h1
+{
+	text-align: center;
+	font-weight: 900;
+	font-size: 2.5em;
+}
+#logo span
+{
+	padding: 0em 0em 0em 0.5em;
+}
+#logo a
+{
+	color: #009E2D;
+}
+#header
+{
+	background: #009E2D;
+}
+#menu ul
+{
+	margin: 0;
+	padding: 20px 0px 20px 0px;
+	list-style: none;
+	line-height: normal;
+	text-align: center;
+}
+#menu li
+{
+	display: inline-block;
+}
+#menu a
+{
+	display: block;
+	padding: 1em 2em;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1em;
+	font-weight: 700;
+	color: #FFF;
+}
+#menu .current_page_item a
+{
+	border-radius: 30px;
+	border: 0px;
+	background-color: rgba(255,255,255,.2);
+}
+#menu a:hover
+{
+	border-radius: 30px;
+	border: 0px;
+	background-color: rgba(255,255,255,.2);
+}
+.page {
+	padding: 6em 2em;
+}
+.title {
+    padding: 1em 2em 2em 2em;
+    text-align: center;
+}
+.title h2 {
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #3f3f3f;
+}
+p {
+    line-height: 180%;
+    text-align: justify;
+}
+.powerpoint {
+	text-align: center;
+	margin: auto;
+	width: 100%;
+}
