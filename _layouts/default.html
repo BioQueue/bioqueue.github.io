@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="BioQueue, Snakemake, Ruffus, bioinformatics, auto, analysis, pipeline" />
+    <meta name="description" content="BioQueue is a free, lightweight and easy-to-use queue system to accelerate the proceeding of bioinformatic workflows. Based on machine learning methods, BioQueue can maximize the efficiency, and it also reduces the possibility of errors caused by unsupervised concurrency." />
+    <title>Publications | BioQueue</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bioqueue.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="logo">
+      <h1><a href="#" class="icon icon-group"><span>BioQueue</span></a></h1>
+    </div>
+    <div id="header">
+      <div id="menu" class="container">
+        <ul>
+          <li><a href="#" accesskey="1" title="">Homepage</a></li>
+          <li><a href="https://github.com/liyao001/BioQueue" target="_blank" accesskey="2" title="">Get started</a></li>
+          <li><a href="https://bioqueue.readthedocs.io/en/latest/" target="_blank" accesskey="3" title="">Documentation</a></li>
+          <li><a href="http://bioqueue.nefu.edu.cn" target="_blank" accesskey="4" title="">Open platform</a></li>
+          <li class="current_page_item"><a href="publication.html" target="_blank" accesskey="5" title="">Publications</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container-fluid">
+      {{ content }}
+    </div>
+    <div class="copyright">
+      <p><strong>Citation:</strong> Yao, L., Wang, H., Song, Y. &amp; Sui, G. <a href="//doi.org/10.1093/bioinformatics/btx403" target="_blank">BioQueue: a novel pipeline framework to accelerate bioinformatics analysis</a>. <i>Bioinformatics</i> <b>33</b>, 3286–3288 (2017)</p>
+      <ul class="list-inline">
+        <li><a href="https://github.com/liyao001/BioQueue">GitHub Repository</a></li>
+        <li><a href="https://bioqueue.readthedocs.io/en/latest/">Documentation</a></li>
+        <li><a href="https://github.com/liyao001/BioQueue/issues">Having Problems?</a></li>
+      </ul>
+      <p>BioQueue is licensed under the <a href="https://github.com/liyao001/BioQueue/blob/master/LICENSE">Apache License 2.0</a>. The documentation is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+    </div>
+  </body>
+  {% if site.google_analytics %}
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', '{{ site.google_analytics }}', 'auto');
+        ga('send', 'pageview');
+      </script>
+    {% endif %}
+</html>
